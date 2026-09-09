@@ -1,0 +1,18 @@
+# CEP Target Analyzer - Python Dependencies
+# Version 1.0
+
+# Qt Framework for GUI
+PySide6>=6.5.0
+
+# Numerical computing
+numpy>=1.24.0
+
+# Computer vision for circle detection
+opencv-python>=4.8.0
+
+# Plotting and visualization
+matplotlib>=3.7.0
+
+# Optional: Better Hebrew text handling in plots
+# Uncomment if you want improved Hebrew text rendering
+# python-bidi>=0.4.2

@@ -1,0 +1,36 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# PyInstaller build artifacts
+build/
+dist/
+
+# Compiled release folder (EXE distributed separately as GitHub Release)
+מחשבון פיזור ודיוק/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE files
+.idea/
+.vscode/
+*.pyproj
+*.sln
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local settings / secrets
+*.env
+.env
+
+# Test artifacts
+.pytest_cache/
+*.log
