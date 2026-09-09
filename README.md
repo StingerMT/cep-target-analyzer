@@ -1,8 +1,8 @@
-# CEP Target Analyzer v1.0
+# CEP Target Analyzer v1.1.0
 
 **Professional ballistic target analysis tool with bilingual support (English/Hebrew)**
 
-**Version 1.0** - Production Ready ✅
+**Version 1.1.0** - Production Ready ✅
 
 A professional ballistic target analysis application with full bilingual support (English/Hebrew) and advanced image rotation capabilities.
 
@@ -52,15 +52,21 @@ Analyzes shooting target images to calculate precision metrics:
 
 ## 🚀 Quick Start
 
-### Installation
+### Download the app (Windows)
+Go to the [Releases page](https://github.com/StingerMT/cep-target-analyzer/releases) and download the `.exe` — no installation required, just run it.
+
+> ⚠️ **Windows SmartScreen notice**: Windows may show a "Windows protected your PC" warning when you first run the app. This is normal for unsigned open-source software. Click **"More info"** → **"Run anyway"** to proceed. The full source code is available in this repository for inspection.
+
+### Run from source
 ```bash
-# Clone or download the project
-cd cep_analyzer_modular_with_plot1old
+# Clone the repo
+git clone https://github.com/StingerMT/cep-target-analyzer.git
+cd cep-target-analyzer
 
 # Activate virtual environment (Windows)
 .\.venv\Scripts\Activate.ps1
 
-# Install dependencies (if needed)
+# Install dependencies
 pip install PySide6 numpy opencv-python matplotlib
 
 # Run the application
