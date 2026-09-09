@@ -2,68 +2,58 @@
 
 **Professional ballistic target analysis tool with bilingual support (English/Hebrew)**
 
-**Version 1.1.0** - Production Ready ✅
+**Version 1.1.0** — Production Ready ✅
 
-A professional ballistic target analysis application with full bilingual support (English/Hebrew) and advanced image rotation capabilities.
+Analyzes shooting target photos to calculate precision and dispersion metrics used in ballistic evaluation.
 
 ---
 
 ## 🎯 What It Does
 
-Analyzes shooting target images to calculate precision metrics:
-- Mean Hit Point (Napam)
-- Standard Deviation (Sigma X/Y)
-- Blocking Radius
-- Extreme Spread
-- CEP50 (Circular Error Probable)
-- Distance from Mean to Origin
+Load a photo of a shooting target, mark your shot holes, set the scale and origin — the app calculates all standard precision metrics in real units (cm, mm, or inches):
+
+| Metric | Description |
+|--------|-------------|
+| **Napam X, Y** | Mean hit point coordinates |
+| **Sigma X, Y** | Horizontal/vertical standard deviation |
+| **CEP50** | Median radius — 50% circular error probable |
+| **Blocking Radius** | Furthest point from mean |
+| **Extreme Spread** | Maximum distance between any two points |
+| **Dist. Napam→Napar** | Mean hit point to origin distance |
+| **mrad** | Milliradian equivalents based on target distance |
 
 ---
 
 ## ✨ Key Features
 
-### 🌍 True Bilingual Support
-- **English** (LTR) and **Hebrew** (RTL) with automatic layout switching
-- All UI elements, dialogs, and plots fully translated
-- Hebrew text displays correctly in matplotlib plots
-
-### 🔄 Advanced Rotation System
-- **Quick rotations**: 90° increments
-- **Fine-tuned rotation**: Custom angles with live preview
-- Slider control with 0.1° precision
-- Smart locking after scale to prevent errors
-
-### 📊 Enhanced Visualization
-- Professional scatter plots with multiple visual elements
-- Draggable legend
-- Radius lines, extreme spread indicators
-- Save plots as PNG
-
-### 💾 Persistent Settings
-- Window position and size remembered
-- Language and theme preferences saved
-- Recent files tracking
-
-### 🎨 Theme Support
-- System, Light, and Dark themes
-- Instant preview with optional restart
+- **Bilingual** — Full English (LTR) and Hebrew (RTL) support with automatic layout mirroring
+- **Image rotation** — Fine-tune image angle with 0.1° precision before analysis
+- **Scale presets** — A4, A5, Letter paper sizes or custom two-point scale
+- **Auto-detect** — OpenCV-based circle detection for shot holes
+- **Interactive plot** — Scatter plot with radius circles, extreme spread lines, draggable legend; exportable as PNG
+- **CSV export** — All coordinates and metrics exported with milliradian conversions
+- **Dark theme** — Modern dark UI, adapts to 1080p/1440p/4K displays
+- **Persistent settings** — Window position, language, colors, and recent files remembered between sessions
 
 ---
 
 ## 🚀 Quick Start
 
-### Download the app (Windows)
-Go to the [Releases page](https://github.com/StingerMT/cep-target-analyzer/releases) and download the `.exe` — no installation required, just run it.
+### Download (Windows — recommended)
 
-> ⚠️ **Windows SmartScreen notice**: Windows may show a "Windows protected your PC" warning when you first run the app. This is normal for unsigned open-source software. Click **"More info"** → **"Run anyway"** to proceed. The full source code is available in this repository for inspection.
+Go to the **[Releases page](https://github.com/StingerMT/cep-target-analyzer/releases)** and download the `.exe` — no installation required, just run it.
+
+> ⚠️ **Windows SmartScreen notice**: Windows may show a "Windows protected your PC" warning the first time you run the app. This is normal for unsigned open-source software. Click **"More info"** → **"Run anyway"** to proceed. The full source code is available in this repository for inspection.
 
 ### Run from source
+
 ```bash
 # Clone the repo
 git clone https://github.com/StingerMT/cep-target-analyzer.git
 cd cep-target-analyzer
 
-# Activate virtual environment (Windows)
+# Create and activate a virtual environment (Windows)
+python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 
 # Install dependencies
@@ -73,7 +63,7 @@ pip install PySide6 numpy opencv-python matplotlib
 python -m cep_analyzer.main
 ```
 
-### Or use the batch file:
+Or use the included batch file which handles setup automatically:
 ```bash
 run_analyzer.bat
 ```
@@ -82,116 +72,48 @@ run_analyzer.bat
 
 ## 📖 Usage
 
-1. **Load Image** - Open your target image
-2. **Rotate** (optional) - Use "Rotate Image…" for precise angle adjustment
-3. **Set Scale** - Click two known points, enter real distance
-4. **Set Origin** - Click the target center
-5. **Add Points** - Click manually or use "Auto-Detect"
-6. **Compute** - Calculate all metrics
-7. **View Plot** - See visual analysis
-8. **Export** - Save results to CSV
-
----
-
-## 📚 Documentation
-
-- **[README.md](README.md)** - This file — overview and quick start
-- **[CHANGELOG.md](CHANGELOG.md)** - Full version history
-- **[BUILD_CHECKLIST.md](BUILD_CHECKLIST.md)** - How to build the EXE yourself
-- **[RELEASE_GUIDE.md](RELEASE_GUIDE.md)** - Release process notes
+1. **Load Image** — Open your target photo
+2. **Rotate** *(optional)* — Use "Rotate Image…" to straighten the image before analysis
+3. **Set Scale** — Click two known points on the image, enter their real-world distance
+4. **Set Origin** — Right-click the aiming point (target center)
+5. **Mark Shots** — Left-click each shot hole, or use "Auto-Detect"
+6. **Compute** — Calculate all metrics
+7. **View Plot** — Inspect the scatter plot visualization
+8. **Export** — Save results to CSV
 
 ---
 
 ## 🔧 Requirements
 
-- Python 3.8+
-- PySide6
-- NumPy
-- OpenCV (cv2)
-- Matplotlib
-
----
-
-## 📊 Calculated Metrics
-
-| Metric | Description |
-|--------|-------------|
-| **Napam X, Y** | Mean Hit Point coordinates |
-| **Sigma X, Y** | Horizontal/Vertical standard deviation |
-| **Blocking Radius** | Furthest point from mean |
-| **Extreme Spread** | Maximum distance between any two points |
-| **Distance Napam-Napar** | Mean to origin distance |
-| **CEP50** | Median radius (50% circular error) |
-
-All results displayed in **cm** with **2 decimal places**.
+- Windows 10 / 11
+- Python 3.8+ *(only needed if running from source)*
+- PySide6, NumPy, OpenCV, Matplotlib *(auto-installed by `run_analyzer.bat`)*
 
 ---
 
 ## 🌍 Languages
 
-- **English** - Full support
-- **Hebrew** - Full support with RTL layout
-
-Want to add more? See [ADDING_LANGUAGES.md](cep_analyzer/README.md)
+- **English** — Full support
+- **Hebrew (עברית)** — Full RTL support
 
 ---
 
-## 🎨 Screenshots
+## 🔮 Roadmap
 
-### English Interface (LTR)
-- Clean, intuitive layout
-- Professional appearance
-- All controls clearly labeled
-
-### Hebrew Interface (RTL)
-- Proper right-to-left layout
-- Hebrew text displays correctly
-- All dialogs mirror appropriately
-
-### Enhanced Plots
-- Multiple visual elements
-- Draggable legend
-- Professional appearance
-- Translated labels
-
----
-
-## 🏆 Status
-
-**✅ COMPLETE & PRODUCTION READY**
-
-All planned features implemented, tested, and documented.
+- Additional language support (Arabic, Russian, French)
+- PDF report generation
+- Batch processing for multiple images
+- Advanced statistics (R95, R99)
+- Auto-detection improvements
 
 ---
 
 ## 📝 License
 
-[CC BY-NC 4.0](LICENSE) — Free for personal and non-commercial use. Attribution required.  
-Commercial use requires explicit permission from the author.  
-© 2025 Benji Abramovitz
+[CC BY-NC 4.0](LICENSE) — Free for personal and non-commercial use. Attribution required.
+Commercial use requires explicit written permission from the author.
+© 2025 Benji Abramovitz | [GitHub](https://github.com/StingerMT)
 
 ---
 
-## 👨‍💻 Developer Notes
-
-- Clean architecture with separation of concerns
-- Type hints throughout
-- Comprehensive error handling
-- Easy to extend and modify
-- Well-documented code
-
----
-
-## 🔮 Future Ideas
-
-- Additional languages (Spanish, French, Arabic, Russian)
-- Batch processing mode
-- Milliradian spread calculation
-- PDF report generation
-- Advanced statistics (R95, R99)
-
----
-
-**Last Updated**: November 13, 2025  
-**Version**: 1.0  
-**Status**: Production Ready ✅
+**Version**: 1.1.0 | **Last Updated**: 2025 | **Status**: Production Ready ✅
