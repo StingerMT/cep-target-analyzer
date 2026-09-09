@@ -199,5 +199,5 @@
 ---
 
 **Release Date**: 2025
-**License**: CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0)
-**Author**: Benji Abramovitz
+**License**: PolyForm Noncommercial 1.0.0
+**Author**: Benyamin Abramovitz

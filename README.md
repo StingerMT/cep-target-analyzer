@@ -43,7 +43,7 @@ Load a photo of a shooting target, mark your shot holes, set the scale and origi
 
 Go to the **[Releases page](https://github.com/StingerMT/cep-target-analyzer/releases)** and download the `.exe` — no installation required, just run it.
 
-> ⚠️ **Windows SmartScreen notice**: Windows may show a "Windows protected your PC" warning the first time you run the app. This is normal for unsigned open-source software. Click **"More info"** → **"Run anyway"** to proceed. The full source code is available in this repository for inspection.
+> ⚠️ **Windows SmartScreen notice**: Windows may show a "Windows protected your PC" warning the first time you run the app. This is normal for unsigned source-available software. Click **"More info"** → **"Run anyway"** to proceed. The full source code is available in this repository for inspection.
 
 ### Run from source
 
@@ -110,7 +110,7 @@ run_analyzer.bat
 
 ## 📝 License
 
-[CC BY-NC 4.0](LICENSE) — Free for personal and non-commercial use. Attribution required.
+[PolyForm Noncommercial 1.0.0](LICENSE) — Free for non-commercial use. Attribution required.
 Commercial use requires explicit written permission from the author.
 © 2025 Benji Abramovitz | [GitHub](https://github.com/StingerMT)
 
