@@ -190,7 +190,7 @@
 
 ### Future Enhancements (TODO)
 - [ ] Executable packaging (PyInstaller)
-- [ ] Auto-detection of shot holes
+- [ ] Shot hole auto-detection (code skeleton exists, not yet production-ready)
 - [ ] Additional language support
 - [ ] Batch processing multiple images
 - [ ] Custom color schemes

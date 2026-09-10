@@ -29,7 +29,6 @@ Load a photo of a shooting target, mark your shot holes, set the scale and origi
 - **Bilingual** — Full English (LTR) and Hebrew (RTL) support with automatic layout mirroring
 - **Image rotation** — Fine-tune image angle with 0.1° precision before analysis
 - **Scale presets** — A4, A5, Letter paper sizes or custom two-point scale
-- **Auto-detect** — OpenCV-based circle detection for shot holes
 - **Interactive plot** — Scatter plot with radius circles, extreme spread lines, draggable legend; exportable as PNG
 - **CSV export** — All coordinates and metrics exported with milliradian conversions
 - **Dark theme** — Modern dark UI, adapts to 1080p/1440p/4K displays
@@ -76,7 +75,7 @@ run_analyzer.bat
 2. **Rotate** *(optional)* — Use "Rotate Image…" to straighten the image before analysis
 3. **Set Scale** — Click two known points on the image, enter their real-world distance
 4. **Set Origin** — Right-click the aiming point (target center)
-5. **Mark Shots** — Left-click each shot hole, or use "Auto-Detect"
+5. **Mark Shots** — Left-click each shot hole
 6. **Compute** — Calculate all metrics
 7. **View Plot** — Inspect the scatter plot visualization
 8. **Export** — Save results to CSV
@@ -104,7 +103,7 @@ run_analyzer.bat
 - PDF report generation
 - Batch processing for multiple images
 - Advanced statistics (R95, R99)
-- Auto-detection improvements
+- Shot hole auto-detection (planned)
 
 ---
 
